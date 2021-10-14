@@ -1,0 +1,28 @@
+<div class="todo {{ (colorMode ? 'todo-dark' : '') }}">
+    <div class="left">
+        <div class="video-bg">
+            <video [autoplay]="true" [muted]="true" loop oncanplay="this.play()" onloadedmetadata="this.muted = true"><source src="../../../assets/videos/hd0523.mp4" type="video/mp4"/></video>
+        </div>
+        <div class="left-inner">
+            <h1>To-Do List</h1>
+            <p>(Submit a new to-do below and it will appear on the right)</p>
+            <p>(Tap on a to-do in the list and it will cross out)</p>
+            <p>(Delete a to-do by clicking on the "X")</p>
+            <form class="new-todos" autocomplete="off" (submit)="addTodo()">
+                <input class="todo-input" name="todoInput" type="text" placeholder="Enter a new to-do..." [(ngModel)]="todoInput" />
+                <input class="todo-submit" type="submit" value="+" />
+            </form>
+            <p>(Choose a color scheme)</p>
+            <button class="light" (click)="lightMode()"></button>
+            <button class="dark" (click)="darkMode()"></button>
+        </div>
+    </div>
+
+    <div class="right">
+        <div *ngFor="let item of todo; let i = index;" class="todoItems {{ (item.completed ? 'done' : '') }}">
+            <div class="id">{{ i + 1 }}</div>
+            <div class="content" (click)="completeTodo(i)">{{ item.content }}</div>
+            <button class="delete" (click)="deleteTodo(i)">X</button>
+        </div>
+    </div>
+</div>
