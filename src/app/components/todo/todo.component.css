@@ -258,15 +258,20 @@ h1 {
         display: none;
     }
     .todo-input {
-        width: 70%;
+        width: 60%;
+        height: 4vh;
+        font-size: 2vh;
     }
     .todo-submit {
-        width: 9vw;
+        width: 22px;
+        height: 22px;
     }
     .light {
-        width: 8vw;
+        width: 22px;
+        height: 22px;
     }
     .dark {
-        width: 8vw;
+        width: 22px;
+        height: 22px;
     }
 }
