@@ -104,13 +104,16 @@ h1 {
     justify-content: start;
     align-items: center;
     text-align: start;
-    width: 86.5%;
+    width: 85%;
     text-indent: 25px;
     font-size: 25px;
+    word-wrap: break-word;
+    overflow-x: scroll;
 }
 
 .delete {
     margin-top: 12.5px;
+    margin-left: 2%;
     height: 20px;
     width: 20px;
     border: none;
@@ -227,4 +230,43 @@ h1 {
 
 .todo-dark .todo-input:focus {
     border: 1px solid white;
+}
+
+@media screen and (max-width: 480px) {
+    .left {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50vh;
+        border-right: none;
+        border-bottom: 1px solid lightgrey;
+    }
+    .right {
+        left: 0;
+        top: 50vh;
+        width: 100%;
+        height: 50vh;
+    }
+    .left-inner {
+        height: 70%;
+    }
+    h1 {
+        display: flex;
+        font-size: 5vw;
+    }
+    p {
+        display: none;
+    }
+    .todo-input {
+        width: 70%;
+    }
+    .todo-submit {
+        width: 9vw;
+    }
+    .light {
+        width: 8vw;
+    }
+    .dark {
+        width: 8vw;
+    }
 }
