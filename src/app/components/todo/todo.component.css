@@ -27,7 +27,6 @@
     left: 0px;
     width: 50%;
     height: 100vh;
-    border-right: 1px solid lightgrey;
     background-color: white;
     z-index: 1;
 }
@@ -47,11 +46,12 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 49.9%;
+    width: 50%;
     height: 100%;
     background-color: white;
     overflow-x: hidden;
     z-index: 1;
+    border-left: 1px solid lightgray;
 }
 
 p {
@@ -107,8 +107,13 @@ h1 {
     width: 85%;
     text-indent: 25px;
     font-size: 25px;
-    word-wrap: break-word;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
 }
 
 .delete {
@@ -181,7 +186,6 @@ h1 {
 .todo-dark .left {
     /* background-color: #212121; */
     background-color: #1a1a1a;
-    border-right: 1px solid #303030;
 }
 
 .todo-dark .left-inner {
@@ -191,6 +195,7 @@ h1 {
 
 .todo-dark .right {
     background-color: #212121;
+    border-left: 1px solid #303030;
 }
 
 .todo-dark .video-bg {
@@ -238,14 +243,14 @@ h1 {
         top: 0;
         width: 100%;
         height: 50vh;
-        border-right: none;
-        border-bottom: 1px solid lightgrey;
     }
     .right {
         left: 0;
         top: 50vh;
         width: 100%;
         height: 50vh;
+        border-left: none;
+        border-top: 1px solid lightgrey;
     }
     .left-inner {
         height: 70%;
@@ -274,5 +279,8 @@ h1 {
     .dark {
         width: 30px;
         height: 30px;
+    }
+    .delete {
+        font-size: 7px;
     }
 }
