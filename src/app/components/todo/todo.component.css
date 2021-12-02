@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 30%;
+    opacity: 0.3;
 }
 
 .video-bg video {
@@ -199,7 +199,7 @@ h1 {
 }
 
 .todo-dark .video-bg {
-    opacity: 2%;
+    opacity: 0.02;
 }
 
 .todo-dark h1 {
